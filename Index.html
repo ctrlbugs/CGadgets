@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container {
+          position: relative;
+          width: 100%;
+          height: 100%;
+        }
+    
+        .bubble {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          border-radius: 25px;
+          background-color: rgba(139, 210, 130, 0.702);
+        }
+      </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>CtrLGadgets</title>
+</head>
+<body>
+    <div class="container">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+    
+      <script>
+        const container = document.querySelector('.container');
+        const bubbles = document.querySelectorAll('.bubble');
+    
+        let maxX = container.offsetWidth - bubbles[0].offsetWidth;
+        let maxY = container.offsetHeight - bubbles[0].offsetHeight;
+    
+        bubbles.forEach(bubble => {
+          let x = Math.floor(Math.random() * maxX);
+          let y = Math.floor(Math.random() * maxY);
+          let dx = (Math.random() - 0.5) * 10;
+          let dy = (Math.random() - 0.5) * 10;
+    
+          bubble.style.left = `${x}px`;
+          bubble.style.top = `${y}px`;
+    
+          setInterval(() => {
+            x += dx;
+            y += dy;
+    
+            if (x < 0 || x > maxX) {
+              dx = -dx;
+            }
+            if (y < 0 || y > maxY) {
+              dy = -dy;
+            }
+    
+            bubble.style.left = `${x}px`;
+            bubble.style.top = `${y}px`;
+          }, 50);
+        });
+      </script>
+      <header>
+          <div class="company-logo">CtrLGadgets 🖥 </div>
+          <nav class="navbar">
+            <ul class="nav-items">
+              <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">OFFER</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">SHOP</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+            </ul>
+          </nav>
+          <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x"></i>
+          </div>
+        </header>
+        <main>
+          <!-- HOME SECTION -->
+          <section class="container section-1">
+            <div class="slogan">
+              <h1 class="company-title">Welcome to CtrLGadgets 🖥</h1>
+              <h2 class="company-slogan">
+                "Your one-stop shop for innovative and cutting-edge gadgets. From smart home devices to wearable tech, we've got you covered. Get ready to experience the future of technology with CtrLgadgets."
+              </h2>
+            </div>
+            <div class="home-computer-container">
+              <img class="home-computer" src="https://github.com/ctrlbugs/CtrLGadgets/blob/master/img/home_img.png" alt="a computer in dark with shadow" class="home-img">
+            </div>
+          </section>
+      
+          <!-- OFFER SECTION -->
+          <section class="container section-2">
+            <!-- offer 1 -->
+            <div class="offer offer-1">
+              <img src="https://github.com/ctrlbugs/CtrLGadgets/blob/master/img/offer_1.png" alt="a computer in dark with with white shadow" class="offer-img offer-1-img">
+              <div class="offer-description offer-desc-1">
+                <h2 class="offer-title">Macbook pro</h2>
+                <p class="offer-hook">"The MacBook Pro is a high-performance laptop from Apple, designed for professionals and power users. It features a sleek design, powerful hardware, and a host of innovative features, including a Retina display, Touch Bar, and improved keyboard and trackpad."</p>
+                <div class="cart-btn">ADD TO CART</div>
+              </div>
+            </div>
+            <!-- offer 2 -->
+            <div class="offer offer-2">
+              <img src="https://github.com/ctrlbugs/CtrLGadgets/blob/master/img/offer_2.png" alt="a opened computer" class="offer-img offer-2-img">
+              <div class="offer-description offer-desc-2">
+                <h2 class="offer-title">Lenovo</h2>
+                <p class="offer-hook">"Lenovo laptops are a popular choice for their combination of performance, durability, and affordability. With a range of models for different uses, including business, gaming, and everyday use, Lenovo laptops offer a great balance of features and value."</p>
+                <div class="cart-btn">ADD TO CART</div>
+              </div>
+            </div>
+          </section>
+      
+          <!-- PRODUCT SECTION -->
+          <section class="container section-3">
+            <!-- product - 1 -->
+            <div class="product product-1">
+              <img src="https://github.com/ctrlbugs/CtrLGadgets/blob/master/img/comp_1.png" alt="computer to sell" class="product-img">
+              <span class="product_add_cart">ADD TO CART</span>
+            </div>
+            <!-- product - 2 -->
+            <div class="product product-2">
+              <img src="https://github.com/ctrlbugs/CtrLGadgets/blob/master/img/comp_2.png" alt="computer to sell" class="product-img">
+              <span class="product_add_cart">ADD TO CART</span>
+            </div>
+            <!-- product - 3 -->
+            <div class="product product-3">
+              <img src="https://github.com/ctrlbugs/CtrLGadgets/blob/master/img/comp_3.png" alt="computer to sell" class="product-img">
+              <span class="product_add_cart">ADD TO CART</span>
+            </div>
+            <!-- product - 4 -->
+            <div class="product product-4">
+              <img src="https://github.com/ctrlbugs/CtrLGadgets/blob/master/img/comp_4.png" alt="computer to sell" class="product-img">
+              <span class="product_add_cart">ADD TO CART</span>
+            </div>
+          </section>
+      
+          <!-- SPONSOR SECTION -->
+          <section class="container section-4">
+            <!-- SPONSOR group 1 -->
+            <div class="sponsor sponsor-1"><img src="https://github.com/ctrlbugs/CtrLGadgets/blob/master/img/microsoft.svg" alt=""></div>
+            <div class="sponsor sponsor-2"><img src="https://github.com/ctrlbugs/CtrLGadgets/blob/master/img/apple.svg" alt=""></div>
+      
+            <!-- SPONSOR group 2 -->
+            <div class="sponsor sponsor-3"><img src="https://github.com/ctrlbugs/CtrLGadgets/blob/master/img/dell.svg" alt=""></div>
+            <div class="sponsor sponsor-4"><img src="https://github.com/ctrlbugs/CtrLGadgets/blob/master/img/ibm.svg" alt=""></div>
+          </section>
+      
+          <!-- SUBSCRIBE SECTION-->
+          <section class="container section-5">
+            <h2 class="subscribe-input-label">NEWSLETTER</h2>
+            <div class="subscribe-container">
+              <input type="text" id="email-subscribe" placeholder="Email address...">
+              <input type="submit" value="SUBSCRIBE">
+            </div>
+          </section>
+        </main>
+        <footer>
+          <div class="container top-footer">
+            <!-- footer item 1 -->
+            <div class="footer-item">
+              <h2 class="footer-title">ADDRESS</h2>
+              <div class="footer-items">
+                <h3>Lagos, Nigeria</h3>
+                <h3>10065 avenue.</h3>
+                <h3>crescent 3A</h3>
+              </div>
+            </div>
+            <!-- footer item 2 -->
+            <div class="footer-item">
+              <h2 class="footer-title">SERVICES</h2>
+              <div class="footer-items">
+                <h3>Maintenance </h3>
+                <h3>hardware</h3>
+                <h3>network installation</h3>
+                <h3>swap & buy</h3>
+                <h3>repairs & sales</h3>
+              </div>
+            </div>
+            <!-- footer item 3 -->
+            <div class="footer-item">
+              <h2 class="footer-title">SUPPLIERS</h2>
+              <div class="footer-items">
+                <h3>Alibaba</h3>
+                <h3>Konga</h3>
+                <h3>Jumia</h3>
+                <h3>Shopify</h3>
+                <h3>Amazon</h3>
+              </div>
+            </div>
+            <!-- footer item 4 -->
+            <div class="footer-item">
+              <h2 class="footer-title">INVESTMENT</h2>
+              <div class="footer-items">
+                <h3>Bamboo</h3>
+                <h3>Payday</h3>
+                <h3>Pillow</h3>
+                <h3>ChipperCash</h3>
+                <h3>FedCash</h3>
+              </div>
+            </div>
+          </div>
+          <div class="container end-footer">
+            <div class="copyright">copyright © 2021 - Present • <b>CtrLGadgets</b></div>
+            <a class="designer" href="https://github.com/ctrlbugs/">CtrLBugs 🐞</a>
+          </div>
+        </footer>
+        <script src="Gadgets.js"></script>
+      </body>
+</body>
+</html>
